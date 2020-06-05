@@ -3,7 +3,7 @@ using namespace std;
 
 bool subset_sum(int a[], int sum, int n)
     {
-        bool dp[n+1][sum+1];
+        bool dp[n+1][sum+1]; // the variable which changes
         //Initialisation
         for(int i=0;i<n+1;i++)
             for(int j=0;j<sum+1;j++){
@@ -23,7 +23,7 @@ bool subset_sum(int a[], int sum, int n)
                         dp[i][j] = dp[i-1][j];
                 }
         
-        return dp[n][sum];
+        return dp[n][sum];// gives the value of last cell in table...
     }
 int main()  
     {
